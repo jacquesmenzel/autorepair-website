@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" fill="none">
+  <defs>
+    <linearGradient id="ar-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6b7a"/>
+      <stop offset="100%" stop-color="#e63946"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(6, 4)">
+    <path d="M36 8 L39 14 L46 12 L46 19 L52 22 L49 28 L54 33 L48 37 L49 44 L42 44 L40 50 L34 47 L28 50 L26 44 L19 44 L20 37 L14 33 L19 28 L16 22 L22 19 L22 12 L29 14Z" fill="rgba(255,255,255,0.9)" stroke="rgba(255,255,255,0.9)" stroke-width="1" stroke-linejoin="round"/>
+    <circle cx="34" cy="30" r="11" fill="#e63946"/>
+    <circle cx="34" cy="30" r="5" fill="rgba(255,255,255,0.9)"/>
+    <g transform="translate(28, 42) rotate(-45)">
+      <rect x="0" y="0" width="6" height="24" rx="2" fill="#e63946"/>
+      <rect x="-2" y="-2" width="10" height="6" rx="2" fill="#e63946"/>
+      <rect x="-1" y="20" width="8" height="7" rx="3" fill="#e63946"/>
+      <rect x="1" y="22" width="4" height="3" rx="1" fill="rgba(255,255,255,0.9)"/>
+    </g>
+    <g stroke="#ff6b7a" stroke-width="1.5" stroke-linecap="round" opacity="0.6">
+      <line x1="0" y1="22" x2="8" y2="22"/><line x1="2" y1="28" x2="10" y2="28"/><line x1="0" y1="34" x2="8" y2="34"/>
+    </g>
+  </g>
+  <text x="78" y="36" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" font-size="30" letter-spacing="2" fill="white">
+    AUTO <tspan fill="#ff6b7a">REPAIR</tspan>
+  </text>
+  <text x="78" y="56" font-family="'Poppins', 'Arial', sans-serif" font-weight="500" font-size="12" fill="rgba(255,255,255,0.7)" letter-spacing="5">MOBILE MECHANIC</text>
+</svg>
