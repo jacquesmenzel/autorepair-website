@@ -308,9 +308,20 @@ ul{list-style:none}
 }
 
 /* ===== SERVICE/INTERNAL PAGE STYLES ===== */
-.page-hero{padding:140px 24px 60px;text-align:center;background:var(--dark);border-bottom:1px solid rgba(255,255,255,.04)}
+.page-hero{padding:140px 24px 60px;text-align:center;background:var(--dark);border-bottom:1px solid rgba(255,255,255,.04);position:relative;overflow:hidden}
+.page-hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 380px at 50% -40px, rgba(230,57,70,.22), transparent 60%),
+  radial-gradient(700px 320px at 10% 20%, rgba(255,107,53,.12), transparent 55%),
+  radial-gradient(600px 280px at 90% 30%, rgba(251,191,36,.10), transparent 55%);pointer-events:none}
+.page-hero .container{position:relative;z-index:1}
+.page-hero h1{text-shadow:0 18px 60px rgba(0,0,0,.55)}
 .page-hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:12px}
 .page-hero p{color:var(--gray);max-width:600px;margin:0 auto}
+.page-hero p{color:rgba(255,255,255,.62)}
+
+/* Common hero image block used by location/blog pages */
+.page-hero + div{max-width:var(--max-w);margin:0 auto;padding:0 24px 32px!important}
+.page-hero + div img{border-radius:var(--radius-lg)!important;box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,.08)}
 .page-content{padding:60px 0}
 .page-content .container{max-width:800px}
 .page-content h2{font-size:1.8rem;margin:40px 0 16px}
