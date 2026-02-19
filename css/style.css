@@ -334,6 +334,7 @@ ul{list-style:none}
 .breadcrumb{font-size:.9rem;color:var(--gray);margin-bottom:14px}
 .breadcrumb a{color:var(--gray-light)}
 .breadcrumb a:hover{color:var(--primary)}
+.breadcrumb span{opacity:.55;margin:0 10px}
 
 /* Legacy blog templates use ".content" instead of ".page-content" */
 .content{padding:60px 0}
@@ -351,6 +352,38 @@ ul{list-style:none}
 .content tr:last-child td{border-bottom:none}
 .cta-phones a{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(10px);padding:12px 18px;border-radius:999px;font-weight:700}
 .cta-phones a:hover{background:rgba(255,255,255,.15)}
+
+/* Location pages: many city pages use an inline-styled services grid.
+   Give those cards the same premium hover/visual treatment. */
+.page-content div[style*="grid-template-columns:repeat(auto-fill"]{margin:24px 0 14px!important}
+.page-content div[style*="grid-template-columns:repeat(auto-fill"] > a{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:8px!important;
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--radius)!important;
+  background:rgba(255,255,255,.03)!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  transform:translateY(0);
+  box-shadow:none;
+}
+.page-content div[style*="grid-template-columns:repeat(auto-fill"] > a::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  background:linear-gradient(135deg, rgba(230,57,70,.18), rgba(255,107,53,.10), rgba(251,191,36,.08));
+  opacity:0;
+  transition:opacity .25s ease;
+  pointer-events:none;
+}
+.page-content div[style*="grid-template-columns:repeat(auto-fill"] > a:hover{
+  transform:translateY(-6px);
+  border-color:rgba(230,57,70,.28)!important;
+  box-shadow:0 22px 55px rgba(0,0,0,.45);
+}
+.page-content div[style*="grid-template-columns:repeat(auto-fill"] > a:hover::before{opacity:1}
+.page-content div[style*="grid-template-columns:repeat(auto-fill"] > a > *{position:relative;z-index:1}
 .page-cta{text-align:center;padding:60px 0;background:var(--dark2)}
 .page-cta h2{margin-bottom:12px}
 .page-cta p{color:var(--gray);margin-bottom:24px}
