@@ -238,6 +238,16 @@ ul{list-style:none}
 .cta-content>p{color:var(--gray-light);font-size:1.1rem;margin-bottom:32px}
 .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
+/* CTA trust row (used on location pages) */
+.cta-features{margin-top:22px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px 22px}
+.cta-feature{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:rgba(255,255,255,.65);font-size:.9rem;font-weight:600;line-height:1.2}
+.cta-feature svg{flex:0 0 auto;display:block}
+.cta-feature span{display:block}
+@media(max-width:520px){
+  .cta-features{gap:10px 14px}
+  .cta-feature{font-size:.85rem}
+}
+
 /* ===== FOOTER ===== */
 .footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,.06);padding:60px 0 0}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px}
