@@ -14,7 +14,8 @@
 <meta name="twitter:title" content="Mobile Auto Repair Services">
 <meta name="twitter:description" content="Complete mobile auto repair services in Fort Lauderdale & Tampa FL. Brakes, oil changes, diagnostics, battery, AC repair & more. We come to you.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://autorepairmobilemechanic.com/services.html">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="stylesheet" href="css/style.css">
@@ -38,57 +39,298 @@
 </script>
 </head>
 <body>
-<header class="header">
-<div class="header-inner">
-  <a href="index.html" class="logo"><div class="logo-icon">🔧</div> AUTO REPAIR <span>MOBILE</span></a>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="locations/fort-lauderdale.html">Fort Lauderdale</a>
-    <a href="locations/tampa.html">Tampa</a>
-    <a href="about.html">About</a>
-    <a href="blog/index.html">Blog</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="contact.html">Contact</a>
-    <a href="tel:9542040658" class="nav-cta">📞 (954) 204-0658</a>
-  </nav>
-  <a href="tel:9542040658" class="header-phone">📞 <span class="phone-text">(954) 204-0658</span></a>
-  <div class="hamburger"><span></span><span></span><span></span></div>
-</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.svg" alt="Auto Repair Mobile Mechanic" style="height: 44px; width: auto;">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="locations/fort-lauderdale.html">Fort Lauderdale</a>
+      <a href="locations/tampa.html">Tampa</a>
+      <a href="about.html">About</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="tel:9542040658" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <span>(954) 204-0658</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
-<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / Services</div><h1>Our Mobile Auto Repair Services</h1><p>Complete auto repair — performed at your location by certified technicians.</p></div></section>
-<section class="section"><div class="container">
-<div class="services-grid">
-  <a href="services/brake-repair.html" class="service-card"><div class="icon">🛑</div><h3>Brake Repair</h3><p>Pads, rotors, calipers, brake fluid flush. Don't drive on bad brakes — we come to you.</p><span class="link">Learn More →</span></a>
-  <a href="services/oil-change.html" class="service-card"><div class="icon">🛢️</div><h3>Oil Change</h3><p>Conventional, synthetic, high-mileage. Includes multi-point inspection.</p><span class="link">Learn More →</span></a>
-  <a href="services/engine-diagnostics.html" class="service-card"><div class="icon">🔍</div><h3>Engine Diagnostics</h3><p>Check engine light, computer diagnostics, root cause analysis.</p><span class="link">Learn More →</span></a>
-  <a href="services/battery-replacement.html" class="service-card"><div class="icon">🔋</div><h3>Battery & Electrical</h3><p>Battery replacement, jump starts, alternator testing, electrical troubleshooting.</p><span class="link">Learn More →</span></a>
-  <a href="services/starter-alternator.html" class="service-card"><div class="icon">⚡</div><h3>Starter & Alternator</h3><p>Starter and alternator replacement and repair. Same-day service available.</p><span class="link">Learn More →</span></a>
-  <a href="services/ac-repair.html" class="service-card"><div class="icon">❄️</div><h3>AC Repair</h3><p>Recharge, compressor, condenser — Florida heat specialists.</p><span class="link">Learn More →</span></a>
-  <a href="services/cooling-system.html" class="service-card"><div class="icon">🌡️</div><h3>Cooling System</h3><p>Radiator, thermostat, water pump, coolant flush. Prevent overheating.</p><span class="link">Learn More →</span></a>
-  <a href="services/pre-purchase-inspection.html" class="service-card"><div class="icon">🔎</div><h3>Pre-Purchase Inspection</h3><p>Comprehensive vehicle inspection before you buy. Written report included.</p><span class="link">Learn More →</span></a>
-  <a href="services/fleet-services.html" class="service-card"><div class="icon">🚛</div><h3>Fleet Services</h3><p>Scheduled maintenance, emergency repairs, customized programs for your business.</p><span class="link">Learn More →</span></a>
-  <a href="services/emergency-roadside.html" class="service-card"><div class="icon">🚨</div><h3>Emergency Roadside</h3><p>Stranded? Fast mobile mechanic response. Jump starts, flat tires, on-site repairs.</p><span class="link">Learn More →</span></a>
-</div>
-</div></section>
-<section class="cta-section">
-  <div class="container">
-    <h2>Don't Wait at the Shop — Let the Shop Come to You</h2>
-    <p>Call now or schedule online. We typically respond within 30 minutes.</p>
-    <div class="cta-phones"><a href="tel:9542040658">📞 (954) 204-0658</a></div>
-    <a href="contact.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.4)">Schedule Online →</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="images/car-repair-2.jpg" alt="Professional mobile auto repair services" loading="eager">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container hero-content">
+    <div class="hero-badge" data-aos="fade-down">
+      <span class="badge-dot"></span>
+      Complete Mobile Auto Repair
+    </div>
+    <h1 data-aos="fade-up">
+      Our Comprehensive<br>
+      <span class="gradient-text">Auto Repair</span> Services
+    </h1>
+    <p class="hero-sub" data-aos="fade-up" data-delay="100">
+      From routine maintenance to emergency repairs — we handle it all at your location with the same quality you'd expect from a top-tier shop. ASE-certified technicians, professional equipment, 12-month warranty.
+    </p>
+    <div class="hero-actions" data-aos="fade-up" data-delay="200">
+      <a href="tel:9542040658" class="btn btn-primary btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call Now
+      </a>
+      <a href="contact.html" class="btn btn-glass btn-lg">
+        Get Free Quote
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
   </div>
 </section>
+
+<!-- SERVICES -->
+<section class="section services-section" id="services">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">What We Do</span>
+      <h2>Complete Mobile Auto Repair Services</h2>
+      <p class="section-desc">Professional auto repair at your location — no shop visits, no tow trucks, no waiting rooms.</p>
+    </div>
+    <div class="services-grid">
+      <a href="services/brake-repair.html" class="service-card" data-aos="fade-up">
+        <div class="service-img"><img src="images/suspension-repair-new.jpg" alt="Brake repair service" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Brake Repair</h3>
+          <p>Pads, rotors, calipers & fluid flush. Don't drive on bad brakes — we come to you.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/oil-change.html" class="service-card" data-aos="fade-up" data-delay="50">
+        <div class="service-img"><img src="images/oil-change.jpg" alt="Oil change service" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6l3 3"/><circle cx="12" cy="14" r="8"/></svg></div>
+          <h3>Oil Change</h3>
+          <p>Conventional, synthetic & high-mileage. Includes filter & multi-point inspection.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/engine-diagnostics.html" class="service-card" data-aos="fade-up" data-delay="100">
+        <div class="service-img"><img src="images/engine-diagnostics-new.jpg" alt="Engine diagnostics" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+          <h3>Engine Diagnostics</h3>
+          <p>Check engine light? Full computer diagnostics — we find the real problem, not just read codes.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/battery-replacement.html" class="service-card" data-aos="fade-up" data-delay="0">
+        <div class="service-img"><img src="images/battery-electrical-new.jpg" alt="Battery replacement" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="22" height="12" rx="2"/><path d="M7 6V4M17 6V4"/></svg></div>
+          <h3>Battery & Electrical</h3>
+          <p>Florida heat kills batteries fast. Testing, replacement & electrical troubleshooting.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/ac-repair.html" class="service-card" data-aos="fade-up" data-delay="50">
+        <div class="service-img"><img src="images/ac-repair-new.jpg" alt="AC repair" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg></div>
+          <h3>AC Repair</h3>
+          <p>In Florida, AC is a necessity. Recharge, compressor, condenser — stay cool.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/starter-alternator.html" class="service-card" data-aos="fade-up" data-delay="100">
+        <div class="service-img"><img src="images/starter-alternator-new.jpg" alt="Starter alternator repair" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h3>Starter & Alternator</h3>
+          <p>Car won't start? Dimming lights? Fast mobile replacement and repair.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/cooling-system.html" class="service-card" data-aos="fade-up" data-delay="0">
+        <div class="service-img"><img src="images/cooling-system-new.jpg" alt="Cooling system service" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M8 14h8"/></svg></div>
+          <h3>Cooling System</h3>
+          <p>Overheating? Radiator, thermostat, water pump & hose service at your location.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/pre-purchase-inspection.html" class="service-card" data-aos="fade-up" data-delay="50">
+        <div class="service-img"><img src="images/pre-purchase-inspection-new.jpg" alt="Pre-purchase inspection" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h3>Pre-Purchase Inspection</h3>
+          <p>Buying a used car? We inspect it before you buy — saving you from costly surprises.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/fleet-services.html" class="service-card" data-aos="fade-up" data-delay="100">
+        <div class="service-img"><img src="images/fleet-services-new.jpg" alt="Fleet services" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <h3>Fleet Services</h3>
+          <p>Keep your fleet running. Scheduled maintenance & repairs for business vehicles.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/emergency-roadside.html" class="service-card" data-aos="fade-up" data-delay="0">
+        <div class="service-img"><img src="images/car-repair-2.jpg" alt="Emergency roadside assistance" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <h3>Emergency Roadside</h3>
+          <p>Stranded? We come to you fast with emergency repair & roadside assistance.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/transmission-service.html" class="service-card" data-aos="fade-up" data-delay="50">
+        <div class="service-img"><img src="images/transmission-service-new.jpg" alt="Transmission service" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="22"/><path d="M5 12h14"/><line x1="5" y1="12" x2="5" y2="22"/><line x1="19" y1="12" x2="19" y2="22"/></svg></div>
+          <h3>Transmission Service</h3>
+          <p>Slipping or shifting rough? Fluid changes, diagnostics & solenoid repair on-site.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/tire-service.html" class="service-card" data-aos="fade-up" data-delay="100">
+        <div class="service-img"><img src="images/suspension-repair-new.jpg" alt="Tire service" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h3>Tire Service</h3>
+          <p>Flat repair, rotation, TPMS service & spare installation — no tire shop needed.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/tune-up.html" class="service-card" data-aos="fade-up" data-delay="0">
+        <div class="service-img"><img src="images/tune-up-new.jpg" alt="Tune-up service" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
+          <h3>Tune-Up</h3>
+          <p>Restore power & fuel efficiency. Spark plugs, filters & ignition system service.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/timing-belt.html" class="service-card" data-aos="fade-up" data-delay="50">
+        <div class="service-img"><img src="images/timing-belt-new.jpg" alt="Timing belt replacement" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Timing Belt</h3>
+          <p>Prevent catastrophic engine damage. Timing belt & chain replacement on-site.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="services/spark-plugs.html" class="service-card" data-aos="fade-up" data-delay="100">
+        <div class="service-img"><img src="images/spark-plugs-new.jpg" alt="Spark plug replacement" loading="lazy"><div class="service-img-overlay"></div></div>
+        <div class="service-content">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h3>Spark Plugs</h3>
+          <p>Misfiring or rough idle? Fresh spark plugs restore power & fuel economy.</p>
+          <span class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-bg">
+    <img src="images/mechanic-tools.jpg" alt="Auto repair background" loading="lazy">
+    <div class="cta-overlay"></div>
+  </div>
+  <div class="container cta-content" data-aos="fade-up">
+    <h2>Ready to Skip the Shop?<br><span class="gradient-text">Let Us Come to You.</span></h2>
+    <p>Same-day service available. We typically respond within 30 minutes.</p>
+    <div class="cta-actions">
+      <a href="tel:9542040658" class="btn btn-primary btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        (954) 204-0658
+      </a>
+      <a href="contact.html" class="btn btn-glass btn-lg">Schedule Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
-<div class="footer-grid">
-  <div><h4>Auto Repair Mobile Mechanic</h4><p style="color:var(--gray);font-size:.9rem">Professional mobile auto repair serving Fort Lauderdale & Tampa, FL.</p><p style="margin-top:12px"><a href="tel:9542040658" style="color:var(--primary);font-weight:700">📞 (954) 204-0658</a></p></div>
-  <div><h4>Services</h4><ul><li><a href="services/brake-repair.html">Brake Repair</a></li><li><a href="services/oil-change.html">Oil Change</a></li><li><a href="services/engine-diagnostics.html">Engine Diagnostics</a></li><li><a href="services/battery-replacement.html">Battery Replacement</a></li><li><a href="services/ac-repair.html">AC Repair</a></li><li><a href="services/emergency-roadside.html">Emergency Roadside</a></li></ul></div>
-  <div><h4>Locations</h4><ul><li><a href="locations/fort-lauderdale.html">Fort Lauderdale</a></li><li><a href="locations/tampa.html">Tampa</a></li></ul><h4 style="margin-top:20px">Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li><li><a href="blog/index.html">Blog</a></li></ul></div>
-  <div><h4>Hours</h4><p style="color:var(--gray);font-size:.9rem">Mon–Sat: 8:00 AM – 6:00 PM<br>Emergency service available</p></div>
-</div>
-<div class="footer-bottom">© 2026 Auto Repair Mobile Mechanic. All rights reserved. | <a href="tel:9542040658">(954) 204-0658</a></div>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <span class="logo-text">AUTO REPAIR <span class="logo-accent">MOBILE</span></span>
+        </a>
+        <p>Professional mobile auto repair serving Fort Lauderdale & Tampa, FL. We bring the shop to your driveway — 20+ years of trusted service.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/brake-repair.html">Brake Repair</a></li>
+          <li><a href="services/oil-change.html">Oil Change</a></li>
+          <li><a href="services/engine-diagnostics.html">Engine Diagnostics</a></li>
+          <li><a href="services/battery-replacement.html">Battery Replacement</a></li>
+          <li><a href="services/ac-repair.html">AC Repair</a></li>
+          <li><a href="services/starter-alternator.html">Starter & Alternator</a></li>
+          <li><a href="services/emergency-roadside.html">Emergency Roadside</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fort Lauderdale</h4>
+        <ul>
+          <li><a href="tel:9542040658">📞 (954) 204-0658</a></li>
+          <li>Mon – Sat: 8AM – 6PM</li>
+          <li>Broward County, FL</li>
+        </ul>
+        <h4 style="margin-top:24px">Tampa</h4>
+        <ul>
+          <li><a href="tel:9542040658">📞 Call Tampa</a></li>
+          <li>Mon – Sat: 8AM – 6PM</li>
+          <li>Hillsborough County, FL</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <h4 style="margin-top:24px">Trust</h4>
+        <ul>
+          <li>✓ Licensed & Insured</li>
+          <li>✓ ASE Certified</li>
+          <li>✓ 12-Month Warranty</li>
+          <li>✓ Upfront Pricing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Auto Repair Mobile Mechanic. All rights reserved.</p>
+      <a href="tel:9542040658" class="footer-phone">(954) 204-0658</a>
+    </div>
+  </div>
 </footer>
-<div class="mobile-cta"><a href="tel:9542040658">📞 Call Now: (954) 204-0658</a></div>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-cta" id="mobileCta">
+  <a href="tel:9542040658" class="mobile-cta-btn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    Call Now — (954) 204-0658
+  </a>
+  <a href="contact.html" class="mobile-cta-secondary">Get Quote</a>
+</div>
 <script src="js/main.js"></script>
 <script src="chat-widget.js"></script>
 </body></html>

@@ -14,7 +14,8 @@
 <meta name="twitter:title" content="Contact Us">
 <meta name="twitter:description" content="Contact Auto Repair Mobile Mechanic. Call (954) 204-0658 or schedule online. Serving Fort Lauderdale & Tampa, FL.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://autorepairmobilemechanic.com/contact.html">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="stylesheet" href="css/style.css">
@@ -39,78 +40,314 @@
 </script>
 </head>
 <body>
-<header class="header">
-<div class="header-inner">
-  <a href="index.html" class="logo"><div class="logo-icon">🔧</div> AUTO REPAIR <span>MOBILE</span></a>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="locations/fort-lauderdale.html">Fort Lauderdale</a>
-    <a href="locations/tampa.html">Tampa</a>
-    <a href="about.html">About</a>
-    <a href="blog/index.html">Blog</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="contact.html">Contact</a>
-    <a href="tel:9542040658" class="nav-cta">📞 (954) 204-0658</a>
-  </nav>
-  <a href="tel:9542040658" class="header-phone">📞 <span class="phone-text">(954) 204-0658</span></a>
-  <div class="hamburger"><span></span><span></span><span></span></div>
-</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.svg" alt="Auto Repair Mobile Mechanic" style="height: 44px; width: auto;">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="locations/fort-lauderdale.html">Fort Lauderdale</a>
+      <a href="locations/tampa.html">Tampa</a>
+      <a href="about.html">About</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <a href="tel:9542040658" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <span>(954) 204-0658</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
-<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / Contact</div><h1>Contact Auto Repair Mobile Mechanic</h1><p>Call us or fill out the form — we typically respond within 30 minutes.</p></div></section>
-<section class="section"><div class="container">
-<div class="contact-grid">
-  <div>
-    <h2 style="margin-bottom:24px">Schedule Your Service</h2>
-    <form id="contact-form">
-      <div class="form-group"><label>Your Name *</label><input type="text" required placeholder="John Smith"></div>
-      <div class="form-group"><label>Phone Number *</label><input type="tel" required placeholder="(555) 123-4567"></div>
-      <div class="form-group"><label>Email</label><input type="email" placeholder="john@example.com"></div>
-      <div class="form-group"><label>Vehicle Year, Make & Model *</label><input type="text" required placeholder="2020 Toyota Camry"></div>
-      <div class="form-group"><label>Service Needed *</label><select required><option value="">Select a service...</option><option>Brake Repair</option><option>Oil Change</option><option>Engine Diagnostics</option><option>Battery Replacement</option><option>Starter/Alternator</option><option>AC Repair</option><option>Cooling System</option><option>Pre-Purchase Inspection</option><option>Fleet Service</option><option>Emergency Roadside</option><option>Other</option></select></div>
-      <div class="form-group"><label>Your Location/Address *</label><input type="text" required placeholder="123 Main St, Fort Lauderdale, FL"></div>
-      <div class="form-group"><label>Preferred Date & Time</label><input type="text" placeholder="Monday morning, ASAP, etc."></div>
-      <div class="form-group"><label>Describe the Issue</label><textarea placeholder="Tell us what's going on with your vehicle..."></textarea></div>
-      <button type="submit" class="btn btn-primary" style="width:100%">Submit Request →</button>
-    </form>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="images/fort-lauderdale.jpg" alt="Contact mobile auto repair in Fort Lauderdale and Tampa" loading="eager">
+    <div class="hero-overlay"></div>
   </div>
-  <div>
-    <div class="contact-info-card">
-      <h3>📍 Fort Lauderdale / Broward County</h3>
-      <p>📞 <a href="tel:9542040658">(954) 204-0658</a></p>
-      <p>📧 info@autorepairmobilemechanic.com</p>
-      <p>🕐 Mon–Sat: 8:00 AM – 6:00 PM</p>
-      <p>🚨 Emergency service available outside normal hours</p>
+  <div class="container hero-content">
+    <div class="hero-badge" data-aos="fade-down">
+      <span class="badge-dot"></span>
+      Same-Day Service Available
     </div>
-    <div class="contact-info-card">
-      <h3>📍 Tampa / Hillsborough County</h3>
-      <p>📞 <a href="tel:9542040658">(954) 204-0658</a></p>
-      <p>📧 tampa@autorepairmobilemechanic.com</p>
-      <p>🕐 Mon–Sat: 8:00 AM – 6:00 PM</p>
+    <h1 data-aos="fade-up">
+      Get in Touch<br>
+      <span class="gradient-text">Today</span>
+    </h1>
+    <p class="hero-sub" data-aos="fade-up" data-delay="100">
+      Call us or fill out the form — we typically respond within 30 minutes. Professional mobile auto repair serving <strong>Fort Lauderdale</strong> &amp; <strong>Tampa</strong>, FL.
+    </p>
+    <div class="hero-actions" data-aos="fade-up" data-delay="200">
+      <a href="tel:9542040658" class="btn btn-primary btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call Now
+      </a>
+      <a href="#contact-form" class="btn btn-glass btn-lg">
+        Schedule Online
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
-    <div class="map-placeholder">📍 Fort Lauderdale Service Area</div>
-    <div class="map-placeholder">📍 Tampa Service Area</div>
-  </div>
-</div>
-</div></section>
-<section class="cta-section">
-  <div class="container">
-    <h2>Don't Wait at the Shop — Let the Shop Come to You</h2>
-    <p>Call now or schedule online. We typically respond within 30 minutes.</p>
-    <div class="cta-phones"><a href="tel:9542040658">📞 (954) 204-0658</a></div>
-    <a href="contact.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.4)">Schedule Online →</a>
+    <div class="hero-trust" data-aos="fade-up" data-delay="300">
+      <div class="hero-trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span>30-Min Response</span>
+      </div>
+      <div class="hero-trust-divider"></div>
+      <div class="hero-trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Licensed & Insured</span>
+      </div>
+      <div class="hero-trust-divider"></div>
+      <div class="hero-trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffd700"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span>4.9/5 Rating</span>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- CONTACT FORM & INFO -->
+<section class="section">
+  <div class="container">
+    <div class="why-grid" style="align-items: flex-start;">
+      <div class="why-content" data-aos="fade-right">
+        <div class="section-header" style="text-align: left; margin-bottom: 32px;">
+          <span class="section-tag">Schedule Service</span>
+          <h2>Get Your Free Quote</h2>
+          <p class="section-desc">Fill out the form below and we'll get back to you within 30 minutes with a personalized quote.</p>
+        </div>
+        <form id="contact-form" style="background: var(--dark3); padding: 32px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.06);">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+            <div class="form-group">
+              <label style="color: var(--text); font-weight: 500; margin-bottom: 8px; display: block;">Your Name *</label>
+              <input type="text" required placeholder="John Smith" style="width: 100%; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 14px;">
+            </div>
+            <div class="form-group">
+              <label style="color: var(--text); font-weight: 500; margin-bottom: 8px; display: block;">Phone Number *</label>
+              <input type="tel" required placeholder="(555) 123-4567" style="width: 100%; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 14px;">
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label style="color: var(--text); font-weight: 500; margin-bottom: 8px; display: block;">Email</label>
+            <input type="email" placeholder="john@example.com" style="width: 100%; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 14px;">
+          </div>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label style="color: var(--text); font-weight: 500; margin-bottom: 8px; display: block;">Vehicle Year, Make & Model *</label>
+            <input type="text" required placeholder="2020 Toyota Camry" style="width: 100%; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 14px;">
+          </div>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label style="color: var(--text); font-weight: 500; margin-bottom: 8px; display: block;">Service Needed *</label>
+            <select required style="width: 100%; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 14px;">
+              <option value="">Select a service...</option>
+              <option>Brake Repair</option>
+              <option>Oil Change</option>
+              <option>Engine Diagnostics</option>
+              <option>Battery Replacement</option>
+              <option>Starter/Alternator</option>
+              <option>AC Repair</option>
+              <option>Cooling System</option>
+              <option>Pre-Purchase Inspection</option>
+              <option>Fleet Service</option>
+              <option>Emergency Roadside</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label style="color: var(--text); font-weight: 500; margin-bottom: 8px; display: block;">Your Location/Address *</label>
+            <input type="text" required placeholder="123 Main St, Fort Lauderdale, FL" style="width: 100%; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 14px;">
+          </div>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label style="color: var(--text); font-weight: 500; margin-bottom: 8px; display: block;">Preferred Date & Time</label>
+            <input type="text" placeholder="Monday morning, ASAP, etc." style="width: 100%; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 14px;">
+          </div>
+          <div class="form-group" style="margin-bottom: 24px;">
+            <label style="color: var(--text); font-weight: 500; margin-bottom: 8px; display: block;">Describe the Issue</label>
+            <textarea placeholder="Tell us what's going on with your vehicle..." style="width: 100%; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 14px; min-height: 100px; resize: vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 16px; padding: 14px;">
+            Submit Request
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+      <div class="why-image" data-aos="fade-left" style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="background: var(--dark3); padding: 32px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.06);">
+          <h3 style="color: var(--primary); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Fort Lauderdale / Broward County
+          </h3>
+          <p style="margin-bottom: 12px;"><strong>📞 <a href="tel:9542040658" style="color: var(--primary);">(954) 204-0658</a></strong></p>
+          <p style="margin-bottom: 12px; color: var(--gray);">📧 info@autorepairmobilemechanic.com</p>
+          <p style="margin-bottom: 12px; color: var(--gray);">🕐 Mon–Sat: 8:00 AM – 6:00 PM</p>
+          <p style="color: var(--gray);">🚨 Emergency service available</p>
+        </div>
+        <div style="background: var(--dark3); padding: 32px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.06);">
+          <h3 style="color: var(--primary); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Tampa / Hillsborough County
+          </h3>
+          <p style="margin-bottom: 12px;"><strong>📞 <a href="tel:9542040658" style="color: var(--primary);">(954) 204-0658</a></strong></p>
+          <p style="margin-bottom: 12px; color: var(--gray);">📧 tampa@autorepairmobilemechanic.com</p>
+          <p style="margin-bottom: 12px; color: var(--gray);">🕐 Mon–Sat: 8:00 AM – 6:00 PM</p>
+          <p style="color: var(--gray);">🚨 Emergency service available</p>
+        </div>
+        <div style="background: var(--dark3); padding: 32px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.06);">
+          <h3 style="color: var(--primary); margin-bottom: 16px;">Why Contact Us?</h3>
+          <div class="why-features">
+            <div class="why-feature" style="margin-bottom: 16px;">
+              <div class="why-feature-icon" style="margin-right: 12px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00c896" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div>
+                <h4 style="font-size: 14px; margin-bottom: 4px;">Fast Response</h4>
+                <p style="font-size: 13px; color: var(--gray);">We typically respond within 30 minutes</p>
+              </div>
+            </div>
+            <div class="why-feature" style="margin-bottom: 16px;">
+              <div class="why-feature-icon" style="margin-right: 12px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00c896" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div>
+                <h4 style="font-size: 14px; margin-bottom: 4px;">Free Quotes</h4>
+                <p style="font-size: 13px; color: var(--gray);">Upfront pricing with no hidden fees</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon" style="margin-right: 12px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00c896" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div>
+                <h4 style="font-size: 14px; margin-bottom: 4px;">Same-Day Service</h4>
+                <p style="font-size: 13px; color: var(--gray);">Often available for urgent repairs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="section locations-section" id="locations">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Service Areas</span>
+      <h2>We Come to You Anywhere in Our Service Areas</h2>
+      <p class="section-desc">Professional mobile auto repair throughout South Florida.</p>
+    </div>
+    <div class="locations-grid">
+      <div class="location-card" data-aos="fade-up">
+        <div class="location-img">
+          <img src="images/fort-lauderdale.jpg" alt="Fort Lauderdale Florida" loading="lazy">
+          <div class="location-img-overlay"></div>
+          <div class="location-badge">📍 Broward County</div>
+        </div>
+        <div class="location-content">
+          <h3>Fort Lauderdale Area</h3>
+          <p>Serving all of Broward County — from the beaches to the Everglades edge.</p>
+          <div class="location-cities">
+            <span>Fort Lauderdale</span><span>Pompano Beach</span><span>Hollywood</span>
+            <span>Plantation</span><span>Sunrise</span><span>Coral Springs</span>
+            <span>Davie</span><span>Weston</span><span>Pembroke Pines</span>
+          </div>
+          <div class="location-cta">
+            <a href="tel:9542040658" class="btn btn-primary btn-sm">📞 (954) 204-0658</a>
+          </div>
+        </div>
+      </div>
+      <div class="location-card" data-aos="fade-up" data-delay="100">
+        <div class="location-img">
+          <img src="images/tampa-skyline.jpg" alt="Tampa Florida skyline" loading="lazy">
+          <div class="location-img-overlay"></div>
+          <div class="location-badge">📍 Hillsborough County</div>
+        </div>
+        <div class="location-content">
+          <h3>Tampa Bay Area</h3>
+          <p>Covering Tampa Bay from Clearwater to Brandon and everywhere in between.</p>
+          <div class="location-cities">
+            <span>Tampa</span><span>St. Petersburg</span><span>Clearwater</span>
+            <span>Brandon</span><span>Riverview</span><span>Wesley Chapel</span>
+            <span>Temple Terrace</span><span>Lutz</span><span>Plant City</span>
+          </div>
+          <div class="location-cta">
+            <a href="tel:9542040658" class="btn btn-primary btn-sm">📞 Call Tampa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
 <footer class="footer">
-<div class="footer-grid">
-  <div><h4>Auto Repair Mobile Mechanic</h4><p style="color:var(--gray);font-size:.9rem">Professional mobile auto repair serving Fort Lauderdale & Tampa, FL.</p><p style="margin-top:12px"><a href="tel:9542040658" style="color:var(--primary);font-weight:700">📞 (954) 204-0658</a></p></div>
-  <div><h4>Services</h4><ul><li><a href="services/brake-repair.html">Brake Repair</a></li><li><a href="services/oil-change.html">Oil Change</a></li><li><a href="services/engine-diagnostics.html">Engine Diagnostics</a></li><li><a href="services/battery-replacement.html">Battery Replacement</a></li><li><a href="services/ac-repair.html">AC Repair</a></li><li><a href="services/emergency-roadside.html">Emergency Roadside</a></li></ul></div>
-  <div><h4>Locations</h4><ul><li><a href="locations/fort-lauderdale.html">Fort Lauderdale</a></li><li><a href="locations/tampa.html">Tampa</a></li></ul><h4 style="margin-top:20px">Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li><li><a href="blog/index.html">Blog</a></li></ul></div>
-  <div><h4>Hours</h4><p style="color:var(--gray);font-size:.9rem">Mon–Sat: 8:00 AM – 6:00 PM<br>Emergency service available</p></div>
-</div>
-<div class="footer-bottom">© 2026 Auto Repair Mobile Mechanic. All rights reserved. | <a href="tel:9542040658">(954) 204-0658</a></div>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <span class="logo-text">AUTO REPAIR <span class="logo-accent">MOBILE</span></span>
+        </a>
+        <p>Professional mobile auto repair serving Fort Lauderdale & Tampa, FL. We bring the shop to your driveway — 20+ years of trusted service.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/brake-repair.html">Brake Repair</a></li>
+          <li><a href="services/oil-change.html">Oil Change</a></li>
+          <li><a href="services/engine-diagnostics.html">Engine Diagnostics</a></li>
+          <li><a href="services/battery-replacement.html">Battery Replacement</a></li>
+          <li><a href="services/ac-repair.html">AC Repair</a></li>
+          <li><a href="services/starter-alternator.html">Starter & Alternator</a></li>
+          <li><a href="services/emergency-roadside.html">Emergency Roadside</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fort Lauderdale</h4>
+        <ul>
+          <li><a href="tel:9542040658">📞 (954) 204-0658</a></li>
+          <li>Mon – Sat: 8AM – 6PM</li>
+          <li>Broward County, FL</li>
+        </ul>
+        <h4 style="margin-top:24px">Tampa</h4>
+        <ul>
+          <li><a href="tel:9542040658">📞 Call Tampa</a></li>
+          <li>Mon – Sat: 8AM – 6PM</li>
+          <li>Hillsborough County, FL</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <h4 style="margin-top:24px">Trust</h4>
+        <ul>
+          <li>✓ Licensed & Insured</li>
+          <li>✓ ASE Certified</li>
+          <li>✓ 12-Month Warranty</li>
+          <li>✓ Upfront Pricing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Auto Repair Mobile Mechanic. All rights reserved.</p>
+      <a href="tel:9542040658" class="footer-phone">(954) 204-0658</a>
+    </div>
+  </div>
 </footer>
-<div class="mobile-cta"><a href="tel:9542040658">📞 Call Now: (954) 204-0658</a></div>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-cta" id="mobileCta">
+  <a href="tel:9542040658" class="mobile-cta-btn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    Call Now — (954) 204-0658
+  </a>
+  <a href="#contact-form" class="mobile-cta-secondary">Get Quote</a>
+</div>
 <script src="js/main.js"></script>
 <script src="chat-widget.js"></script>
 </body></html>

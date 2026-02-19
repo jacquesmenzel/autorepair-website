@@ -1,11 +1,11 @@
 (function() {
   const CONFIG = {
-    apiUrl: 'http://localhost:8000/api/v1/website-chat/message',
+    apiUrl: '/api/intake',
     website: 'autorepair',
     brandName: 'Auto Repair Mobile Mechanic',
     brandColor: '#059669',
     brandColorLight: '#10b981',
-    proactiveMessage: "Hey! 👋 This is Sarah. Thanks for checking out our website! I'm a live rep and I'm actually online right now. If you have any questions or would like to schedule an appointment, I'm here to help!",
+    proactiveMessage: "Hey! 👋 This is Sarah. I can get your request saved right now. I just need your name, phone, address, and what issue you need help with.",
     avatarUrl: 'images/sarah-avatar.jpg',
     proactiveDelay: 30000,
   };
@@ -15,6 +15,20 @@
   let hasProactiveShown = false;
   let unreadCount = 0;
   let messages = [];
+  const INTAKE_KEY = 'chat_intake_' + CONFIG.website;
+  let intake = loadIntake();
+
+  function loadIntake() {
+    try {
+      const raw = localStorage.getItem(INTAKE_KEY);
+      if (raw) return JSON.parse(raw);
+    } catch (_) {}
+    return { step: 'name', data: { name: '', phone: '', address: '', issue: '' }, completed: false };
+  }
+
+  function saveIntake() {
+    localStorage.setItem(INTAKE_KEY, JSON.stringify(intake));
+  }
 
   // --- Styles ---
   const style = document.createElement('style');
@@ -212,6 +226,62 @@
     return d.innerHTML;
   }
 
+  function nextQuestion() {
+    if (intake.step === 'name') return "Great — what's your full name?";
+    if (intake.step === 'phone') return "Thanks. What's the best phone number to reach you?";
+    if (intake.step === 'address') return "Got it. What's the service address?";
+    if (intake.step === 'issue') return "Perfect. Briefly describe the vehicle issue you're having.";
+    return "Thanks! I'm getting this saved now.";
+  }
+
+  function captureByStep(text) {
+    if (intake.step === 'name') {
+      intake.data.name = text;
+      intake.step = 'phone';
+      return true;
+    }
+    if (intake.step === 'phone') {
+      intake.data.phone = text;
+      intake.step = 'address';
+      return true;
+    }
+    if (intake.step === 'address') {
+      intake.data.address = text;
+      intake.step = 'issue';
+      return true;
+    }
+    if (intake.step === 'issue') {
+      intake.data.issue = text;
+      intake.step = 'done';
+      return true;
+    }
+    return false;
+  }
+
+  async function submitIntake() {
+    const payload = {
+      website: CONFIG.website,
+      session_id: sessionId,
+      ...intake.data,
+    };
+    const res = await fetch(CONFIG.apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    return data;
+  }
+
+  function serviceHelpResponse(text) {
+    const msg = text.toLowerCase();
+    if (msg.includes('brake')) return "Yes — we handle brake repair and replacement at your location.";
+    if (msg.includes('battery') || msg.includes('electrical')) return "Yes — battery and electrical diagnostics are part of our mobile service.";
+    if (msg.includes('ac') || msg.includes('a/c')) return "Yes — we do mobile A/C diagnostics and repair.";
+    if (msg.includes('oil')) return "Yes — we do mobile oil and fluid service.";
+    return "We offer mobile diagnostics, brakes, battery/electrical, A/C, oil/fluid services, starter/alternator, suspension, and more across Fort Lauderdale and Tampa.";
+  }
+
   async function sendMessage() {
     const text = input.value.trim();
     if (!text) return;
@@ -220,28 +290,51 @@
     showTyping();
 
     try {
-      const res = await fetch(CONFIG.apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text, session_id: sessionId, website: CONFIG.website }),
-      });
-      const data = await res.json();
-      sessionId = data.session_id;
-      localStorage.setItem('chat_session_' + CONFIG.website, sessionId);
-      // Simulate human typing delay
-      const delay = Math.min(800 + data.response.length * 15, 3000);
-      setTimeout(() => {
-        hideTyping();
-        addMessage('assistant', data.response);
-        if (!isOpen) {
-          unreadCount++;
-          badge.textContent = unreadCount;
-          badge.style.display = 'flex';
+      let reply = '';
+      if (intake.completed) {
+        reply = "I've already saved your request. If you need another one, refresh the page and I can start a new intake.";
+      } else {
+        const askedServiceQuestion =
+          /(service|repair|fix|work on|do you|can you|offer|price|quote|estimate|brake|battery|ac|oil|diagnostic)/i.test(text);
+
+        if (askedServiceQuestion && intake.step === 'name') {
+          reply = serviceHelpResponse(text) + " " + nextQuestion();
+        } else {
+          captureByStep(text);
+          saveIntake();
+          if (intake.step === 'done') {
+            const data = await submitIntake();
+            const ref = data && data.request_id ? ` Reference: ${data.request_id}.` : '';
+            intake.completed = true;
+            saveIntake();
+            reply = "Perfect — I saved your request and our team will call you shortly to confirm details." + ref;
+          } else {
+            reply = nextQuestion();
+          }
         }
-      }, delay);
+      }
+
+      sessionId = sessionId || (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()));
+      localStorage.setItem('chat_session_' + CONFIG.website, sessionId);
+      hideTyping();
+      addMessage('assistant', reply);
+      if (!isOpen) {
+        unreadCount++;
+        badge.textContent = unreadCount;
+        badge.style.display = 'flex';
+      }
     } catch (e) {
       hideTyping();
-      addMessage('assistant', "Sorry, I'm having a little trouble connecting. Try again in a moment! 😊");
+      try {
+        const backups = JSON.parse(localStorage.getItem('chat_intake_backup_' + CONFIG.website) || '[]');
+        backups.push({
+          saved_at: new Date().toISOString(),
+          session_id: sessionId,
+          ...intake.data,
+        });
+        localStorage.setItem('chat_intake_backup_' + CONFIG.website, JSON.stringify(backups));
+      } catch (_) {}
+      addMessage('assistant', "I couldn't reach intake storage right now, but I saved your request locally in this browser. Please call (954) 204-0658 and mention website chat just in case.");
     }
   }
 

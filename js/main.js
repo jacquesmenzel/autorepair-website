@@ -1,14 +1,15 @@
 // ===== HEADER SCROLL =====
-const header = document.getElementById('header');
-let lastScroll = 0;
+// Some older pages use legacy markup without IDs. Fall back to class selectors.
+const header = document.getElementById('header') || document.querySelector('header.header');
 window.addEventListener('scroll', () => {
+  if (!header) return;
   header.classList.toggle('scrolled', window.scrollY > 50);
 }, { passive: true });
 
 // ===== HAMBURGER =====
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
-if (hamburger) {
+const hamburger = document.getElementById('hamburger') || document.querySelector('.hamburger');
+const nav = document.getElementById('nav') || document.querySelector('.nav');
+if (hamburger && nav) {
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     nav.classList.toggle('open');
@@ -132,7 +133,7 @@ if (track && prevBtn && nextBtn) {
 }
 
 // ===== MOBILE STICKY CTA =====
-const mobileCta = document.getElementById('mobileCta');
+const mobileCta = document.getElementById('mobileCta') || document.querySelector('.mobile-cta');
 if (mobileCta) {
   window.addEventListener('scroll', () => {
     mobileCta.classList.toggle('visible', window.scrollY > 400);
